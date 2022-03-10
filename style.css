@@ -1,0 +1,76 @@
+
+body {
+    overflow: hidden; /* Hide scrollbars */
+  }
+#header{
+    background: #00a2d1;
+    width: 100%;
+    height:50px;
+    color: #fff;
+    font-size: 36px;
+}
+
+.form-style{
+    font-family: 'Open Sans Condensed',Arial, Helvetica, sans-serif;
+    width: 400px;
+    padding:30px;
+    background: #ffffff;
+    margin: 40px auto;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.22);
+    --moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.22);
+    --webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.22);
+
+}
+
+.form-style h2{
+    background: #43D1AF;
+    font-family: 'Open Sans Condensed',Arial, Helvetica, sans-serif;
+    color: #080404;
+    font-size: 20px;
+    font-weight: 150;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+}
+.form-style.textarea-field
+{
+    height: 100px;
+    width:230px;
+    border-radius: 5px;
+}
+.input-group
+{
+    margin: 10px 0px 10px 0px;
+}
+
+.input-group input{
+    height: 9px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.input-group select
+{
+    width:95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.btn
+{
+    padding: 10px;
+    font-size:15px;
+    color: #ffffff;
+    background: #2A88AD;
+    border-radius: 5px;
+    border: none;
+    
+    
+}

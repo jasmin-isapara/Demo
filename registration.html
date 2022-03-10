@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css"/> 
+
+    
+</head>
+
+
+<body bgcolor="lightblue">
+    <!-- onsubmit="return fnoValidate(); -->
+    <div class="form-style">
+        <h2 align="center">REGISTRATION FORM</h2>
+        <form name="form1" method="post" action="#"  autocomplete="off">
+            <table align="center" width="400" border="0">
+                <tr>
+                    <td width="125"> &nbsp;Firstname</td>
+                    <td width="180"><div class="input-group">
+                        <input type="text" id="fname" name="fname"size="20"></div>  
+                     </td>   
+                </tr>
+                <tr>
+                    <td width="125"> &nbsp;Lastname</td>
+                    <td width="180"><div class="input-group">
+                        <input type="text" name="lname" size="20">
+                    </div>
+                    </td>
+                </tr>
+                <tr><td> &nbsp;Gender:</td><td><span id="gen"><input type="radio" name="gender" value="Male" id="male">Male
+                <input type="radio" name="gender" value="Female" id="female">Female</span></td></tr>
+                
+                <tr><td> &nbsp;Address:</td><td><textarea name="address" class="textarea-field" ></textarea></td></tr>
+
+                <tr><td> &nbsp;Country:</td><td><div class="input-group">
+                    <select id="country">
+                        <option value="">Choose A Country</option>
+                        <option value="ind">India</option>
+                        <option value="aus">Australia</option>
+                        <option value="eng">England</option>
+                        <option value="ame">America</option>
+                    </select>
+                </div></td></tr>
+
+                <tr>
+                    <td> &nbsp;Mobile No</td>
+                    <td><div class="input-group"><input type="text" name="phone" ></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> &nbsp;Email</td>
+                    <td><div class="input-group"><input type="text" name="email"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> &nbsp;Password</td>
+                    <td><div class="input-group"><input type="password" name="password"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> &nbsp;Confirm Password</td>
+                    <td><div class="input-group"><input type="password" name="conpassword"></div>
+                    </td>
+                </tr>
+
+                <tr><td></td><td><input type="submit" onclick="validation()" name="submit" id="submit" value="SUBMIT" class="btn">&nbsp&nbsp
+                <input type="reset" name="reset" value="RESET" class="btn"></td></tr>
+            </table>
+        
+        </form>
+        <script src="validation.js"></script>
+    </div>
+
+</body>
+</html>
