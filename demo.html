@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            height: 450px;
+            width: 300px;
+            margin: auto;
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid black;
+        }
+
+        input {
+            height: 25px;
+            width: 179px;
+            margin: 5px;
+            border: 2px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input:hover {
+            border: 3px solid #00BFFF;
+        }
+
+        button {
+            font-weight: bold;
+            height: 25px;
+            width: 179px;
+            border: 2px solid black;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            border: 2px solid black;
+            background-color: #00BFFF;
+        }
+
+        .validation-class {
+            display: block;
+            color: red;
+        }
+
+        a {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form1">
+        <h1>Registation Form</h1>
+        <input type="text" id="fname" placeholder="Enter Name">
+        <span id="error_fname"></span>
+        <input type="text" id="lname" placeholder="Enter Last Name">
+        <span id="error_lname"></span>
+        <input type="text" id="email" placeholder="Enter Email">
+        <span id="error_email"></span>
+        <input type="text" id="phone-num" placeholder="Enter phone Number">
+        <span id="error_phone"></span>
+        <input type="password" id="password" placeholder="Enter Password">
+        <span id="error_password"></span>
+        <input type="password" id="password2" placeholder="Re Enter Password"><br>
+        <span id="error_password2"></span>
+        <button type="submit" id="savebtn" onclick="validation() ">Submit</button>
+        <a href="login.php">Already have an Account?</a>
+    </form>
+</body>
+<script>
+    function validation()
+    {
+        
+        var fn = document.getElementById("fname");
+
+        if (fn.value == null || fname.value.match(/^ *$/)) {
+            alert("Enter Valid Firstname");
+            return false;
+        }
+
+        var ln = document.getElementById("lname");
+        if (ln.value == null || lname.value.match(/^ *$/)) {
+            alert("Enter valid Lastname");
+            return false;
+        }
+
+
+
+        var em = document.getElementById("email");
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form1.email.value))) {
+            alert("You have entered an invalid email address!")
+            return (false)
+        }
+
+        var pn = document.getElementById("phone-num");
+        var phoneno = /^\d{10}$/;
+        if(!pn.value.match(phoneno))
+        {
+            alert("Enter valid Phone Number");
+            return false;
+        }
+
+        
+        var pass = document.getElementById("password");
+        var passw=  /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+        if(pass.value.match(passw)) 
+        { 
+            alert('password should contain atleast one number and one special character')
+            return false;
+        }
+       console.log('pass', pass);
+        var cpass = document.getElementById("password2");
+        if(cpass.value != pass.value )
+        {
+            alert("Password Doesn't Match");
+            return false;
+        }
+
+        console.log('cpass', cpass);
+        
+
+    }
+
+
+
+
+
+</script>
+
+</html>
