@@ -25,7 +25,7 @@
                 <tr>
                     <td width="125"> &nbsp;Lastname</td>
                     <td width="180"><div class="input-group">
-                        <input type="text" name="lname" size="20">
+                        <input type="text" name="lname" id="lname" size="20">
                     </div>
                     </td>
                 </tr>
@@ -46,34 +46,90 @@
 
                 <tr>
                     <td> &nbsp;Mobile No</td>
-                    <td><div class="input-group"><input type="text" name="phone" ></div>
+                    <td><div class="input-group"><input type="text" id="num" name="phone" ></div>
                     </td>
                 </tr>
 
                 <tr>
                     <td> &nbsp;Email</td>
-                    <td><div class="input-group"><input type="text" name="email"></div>
+                    <td><div class="input-group"><input type="text" id="email" name="email"></div>
                     </td>
                 </tr>
 
                 <tr>
                     <td> &nbsp;Password</td>
-                    <td><div class="input-group"><input type="password" name="password"></div>
+                    <td><div class="input-group"><input type="password" id="pass" name="password"></div>
                     </td>
                 </tr>
 
-                <tr>
+                <!-- <tr>
                     <td> &nbsp;Confirm Password</td>
                     <td><div class="input-group"><input type="password" name="conpassword"></div>
                     </td>
-                </tr>
+                </tr> -->
 
-                <tr><td></td><td><input type="submit" onclick="validation()" name="submit" id="submit" value="SUBMIT" class="btn">&nbsp&nbsp
+                <tr><td></td><td><input type="button" onclick="validation()" name="submit" id="submit" value="SUBMIT" class="btn">&nbsp&nbsp
                 <input type="reset" name="reset" value="RESET" class="btn"></td></tr>
             </table>
         
         </form>
-        <script src="validation.js"></script>
+        <script>
+        function validation()
+        {
+        
+            var fn = document.getElementById("fname");
+
+            if (fn.value == null || fname.value.match(/^ *$/)) 
+            {
+                alert("Enter Valid Firstname");
+                return false;
+            }
+
+            var ln = document.getElementById("lname");
+            if (ln.value == null || lname.value.match(/^ *$/)) 
+            {
+                alert("Enter valid Lastname");
+                return false;
+            }
+
+            var male = document.getElementById("male");
+            var female = document.getElementById("female");
+  
+            if (male.checked == false && female.checked == false ) 
+            {
+                alert("You must select male, female or other");
+                return false;
+            }
+
+
+            var pn = document.getElementById("num");
+            var phoneno = /^\d{10}$/;
+            if(!pn.value.match(phoneno))
+            {
+                 alert("Enter valid Phone Number");
+                 return false;
+            }
+
+            var em = document.getElementById("email");
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form1.email.value))) 
+            {
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+
+
+            var pass = document.getElementById("pass");
+            var passw=  /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            if(!pass.value.match(passw)) 
+            { 
+                alert('password should contain atleast one number and one special character')
+                return false;
+            }
+
+
+        }
+
+        </script>
     </div>
 
 </body>
